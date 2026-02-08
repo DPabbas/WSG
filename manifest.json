@@ -19,8 +19,9 @@
     {
       "src": "favicon.png",
       "sizes": "32x32",
-      "type": "image/x-icon"
+      "type": "image/png"
     }
   ]
 }
+
 
