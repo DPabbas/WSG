@@ -1,0 +1,148 @@
+:root {
+  --bg-main: #247add;
+  --bg-card: #201f1f;
+  --bg-box: #222;
+
+  --color-text: #ffffff;
+  --color-accent: #a31515;
+  --color-muted: #fcfdff;
+
+  --radius-lg: 18px;
+  --radius-md: 12px;
+  --radius-sm: 8px;
+
+  --space-lg: 24px;
+  --space-md: 12px;
+  --space-sm: 8px;
+
+  --font-base: 17px;
+  --font-title: 22px;
+  --font-big: 26px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, var(--bg-main), #928dab);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  direction: rtl;
+}
+
+.app {
+ background: linear-gradient(270deg, #037ff3, #0082fc, #0026ff);
+background-size: 600% 600%;
+animation: bgMove 5s ease infinite;
+  color: var(--color-text);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+h1 {
+  font-size: var(--font-title);
+  margin-bottom: var(--space-md);
+}
+
+.card {
+  display: none;
+  animation: fade 0.4s ease;
+}
+
+.card.active {
+  display: block;
+}
+
+label {
+  display: block;
+  text-align: right;
+  font-weight: 500;
+  font-size: var(--font-base);
+  color: var(--color-muted);
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: var(--space-sm) 0;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-size: var(--font-base);
+}
+
+input {
+  background: #fff;
+  color: #000;
+}
+
+button {
+  background: var(--color-accent);
+  color: #fff;
+  font-size: var(--font-base);
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1);
+  font-size: var(--font-base);
+  opacity: 0.9;
+}
+
+#text{
+  font-size: var(--font-base);
+  font-weight: 700;
+}
+
+#roleBox {
+  background: var(--bg-box);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  margin: var(--space-md) 0;
+  font-size: 20px;
+}
+
+#timer {
+  font-size: var(--font-big);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+p {
+  font-size: var(--font-base);
+  color: var(--color-muted);
+}
+
+@keyframes fade {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+@media (max-width: 480px) {
+  .app {
+    width: 90%;
+    padding: var(--space-md);
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  #timer {
+    font-size: 32px;
+  }
+}
+
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

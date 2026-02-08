@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>Who is Spy</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+  <link rel="icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="icon-180.png">
+  <link rel="manifest" href="icon-190.png">
+
+
+
+</head>
+<body>
+  <div class="app">
+    <h1>Who is Spy</h1>
+
+    <div id="setup" class="card active">
+      <label>تعداد بازیکن‌ها</label>
+      <input type="number" id="totalPlayers" min="3" />
+
+      <label>تعداد جاسوس‌ ها</label>
+      <input type="number" id="spyCount" min="1" />
+
+      <button id="startBtn">شروع بازی</button>
+    </div>
+
+    <div id="reveal" class="card">
+      <p id="text">به نظرت جاسوسی؟</p>
+      <h2 id="playerLabel"></h2>
+      <div id="roleBox"></div>
+
+      <button id="showBtn"> نمایش نقش</button>
+      <button id="hideNextBtn" style="display:none;">مخفی کن</button>
+    </div>
+
+    <div id="timerScreen" class="card">
+      <h2 id="go"> برو بریم </h2>
+      <div id="timer">02:00</div>
+      <button id="resetBtn">یک دور دیگه بریم!</button>
+    </div>
+  </div>
+
+  
+</body>
+</html>
